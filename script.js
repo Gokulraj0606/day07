@@ -4,8 +4,16 @@ request.send();
 request.onload=function(){
   var result=JSON.parse(request.response);
 
-  var res=result.map((ele)=>ele.population).reduce((acc,ele)=>acc+ele);
-  console.log(res)
+ var res=result.filter((ele)=>{for (var i=0;i<ele.currencies.length;i++)
+{
+  if(ele.currencies[i].code==="USD")
+  {
+    return true;
+  }
+}
+})
+ var abc=res.map((ele)=>ele.name)
+ console.log(abc)
  
  
 }
