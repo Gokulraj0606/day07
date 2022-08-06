@@ -4,6 +4,23 @@ request.send();
 request.onload=function(){
   var result=JSON.parse(request.response);
   
-  var res=result.filter((ele)=>ele.population<200000).map((ele)=>ele.name)
-  console.log(res)
+
+  var res=result.map((ele)=>ele.name)
+  res.forEach(ele=>{
+    console.log(ele)
+  })
+  var abc=result.map((ele0)=>ele0.capital)
+  abc.forEach(ele0=>{
+    console.log(ele0)
+  })
+
+
+
+
+  var ret=result.map((ele1)=>ele1.flag)
+  ret.forEach(ele1=>{
+    console.log(ele1)
+  })
+  
+ 
 }
