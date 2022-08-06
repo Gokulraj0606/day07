@@ -4,6 +4,6 @@ request.send();
 request.onload=function(){
   var result=JSON.parse(request.response);
   
-  var res=result.filter((ele)=>ele.region==="Asia").map((ele)=>ele.name)
+  var res=result.filter((ele)=>ele.population<200000).map((ele)=>ele.name)
   console.log(res)
 }
