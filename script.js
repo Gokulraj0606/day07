@@ -15,5 +15,5 @@ request.onload=function(){
  var abc=res.map((ele)=>ele.name)
  console.log(abc)
  
- 
+
 }
